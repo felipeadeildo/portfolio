@@ -2,12 +2,7 @@ import { ArrowLeft, FileText, Image } from "lucide-react";
 import { Link } from "react-router";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "~/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { Skeleton } from "~/components/ui/skeleton";
 import { useBiography, useChapter, useContentBlocks } from "~/hooks";
 import type { Route } from "./+types/chapter";
