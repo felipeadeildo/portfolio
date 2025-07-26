@@ -17,9 +17,9 @@ export type Database = {
     Functions: {
       graphql: {
         Args: {
-          query?: string;
           extensions?: Json;
           operationName?: string;
+          query?: string;
           variables?: Json;
         };
         Returns: Json;
@@ -34,13 +34,274 @@ export type Database = {
   };
   public: {
     Tables: {
-      [_ in never]: never;
+      biographies: {
+        Row: {
+          created_at: string;
+          id: string;
+          owner_id: string;
+          summary: string | null;
+          title: string;
+        };
+        Insert: {
+          created_at?: string;
+          id?: string;
+          owner_id: string;
+          summary?: string | null;
+          title: string;
+        };
+        Update: {
+          created_at?: string;
+          id?: string;
+          owner_id?: string;
+          summary?: string | null;
+          title?: string;
+        };
+        Relationships: [];
+      };
+      block_group_permissions: {
+        Row: {
+          block_id: string;
+          group_id: number;
+        };
+        Insert: {
+          block_id: string;
+          group_id: number;
+        };
+        Update: {
+          block_id?: string;
+          group_id?: number;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "block_group_permissions_block_id_fkey";
+            columns: ["block_id"];
+            isOneToOne: false;
+            referencedRelation: "content_blocks";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "block_group_permissions_group_id_fkey";
+            columns: ["group_id"];
+            isOneToOne: false;
+            referencedRelation: "groups";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      block_user_permissions: {
+        Row: {
+          block_id: string;
+          user_id: string;
+        };
+        Insert: {
+          block_id: string;
+          user_id: string;
+        };
+        Update: {
+          block_id?: string;
+          user_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "block_user_permissions_block_id_fkey";
+            columns: ["block_id"];
+            isOneToOne: false;
+            referencedRelation: "content_blocks";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      chapter_group_permissions: {
+        Row: {
+          chapter_id: string;
+          group_id: number;
+        };
+        Insert: {
+          chapter_id: string;
+          group_id: number;
+        };
+        Update: {
+          chapter_id?: string;
+          group_id?: number;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "chapter_group_permissions_chapter_id_fkey";
+            columns: ["chapter_id"];
+            isOneToOne: false;
+            referencedRelation: "chapters";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "chapter_group_permissions_group_id_fkey";
+            columns: ["group_id"];
+            isOneToOne: false;
+            referencedRelation: "groups";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      chapter_user_permissions: {
+        Row: {
+          chapter_id: string;
+          user_id: string;
+        };
+        Insert: {
+          chapter_id: string;
+          user_id: string;
+        };
+        Update: {
+          chapter_id?: string;
+          user_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "chapter_user_permissions_chapter_id_fkey";
+            columns: ["chapter_id"];
+            isOneToOne: false;
+            referencedRelation: "chapters";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      chapters: {
+        Row: {
+          biography_id: string;
+          created_at: string;
+          id: string;
+          permission_required: number;
+          position: number;
+          title: string;
+        };
+        Insert: {
+          biography_id: string;
+          created_at?: string;
+          id?: string;
+          permission_required?: number;
+          position: number;
+          title: string;
+        };
+        Update: {
+          biography_id?: string;
+          created_at?: string;
+          id?: string;
+          permission_required?: number;
+          position?: number;
+          title?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "chapters_biography_id_fkey";
+            columns: ["biography_id"];
+            isOneToOne: false;
+            referencedRelation: "biographies";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      content_blocks: {
+        Row: {
+          chapter_id: string;
+          created_at: string;
+          id: string;
+          media_id: string | null;
+          permission_required: number | null;
+          position: number;
+          text_content: string | null;
+          type: string;
+        };
+        Insert: {
+          chapter_id: string;
+          created_at?: string;
+          id?: string;
+          media_id?: string | null;
+          permission_required?: number | null;
+          position: number;
+          text_content?: string | null;
+          type: string;
+        };
+        Update: {
+          chapter_id?: string;
+          created_at?: string;
+          id?: string;
+          media_id?: string | null;
+          permission_required?: number | null;
+          position?: number;
+          text_content?: string | null;
+          type?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "content_blocks_chapter_id_fkey";
+            columns: ["chapter_id"];
+            isOneToOne: false;
+            referencedRelation: "chapters";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      groups: {
+        Row: {
+          created_at: string;
+          id: number;
+          name: string;
+        };
+        Insert: {
+          created_at?: string;
+          id?: number;
+          name: string;
+        };
+        Update: {
+          created_at?: string;
+          id?: number;
+          name?: string;
+        };
+        Relationships: [];
+      };
+      user_groups: {
+        Row: {
+          group_id: number;
+          user_id: string;
+        };
+        Insert: {
+          group_id: number;
+          user_id: string;
+        };
+        Update: {
+          group_id?: number;
+          user_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "user_groups_group_id_fkey";
+            columns: ["group_id"];
+            isOneToOne: false;
+            referencedRelation: "groups";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
     };
     Views: {
       [_ in never]: never;
     };
     Functions: {
-      [_ in never]: never;
+      can_view_block: {
+        Args: { block_id_param: string };
+        Returns: boolean;
+      };
+      can_view_chapter: {
+        Args: { chapter_id_param: string };
+        Returns: boolean;
+      };
+      is_admin: {
+        Args: Record<PropertyKey, never>;
+        Returns: boolean;
+      };
+      user_in_group: {
+        Args: { group_id_param: number };
+        Returns: boolean;
+      };
     };
     Enums: {
       [_ in never]: never;
