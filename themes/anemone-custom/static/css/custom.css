@@ -1,0 +1,53 @@
+body {
+  grid-template-columns: 1fr min(75rem, 95%) 1fr;
+}
+
+textarea {
+  max-width: 56rem;
+}
+
+dialog {
+  max-width: 50rem;
+}
+
+.floating-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.floating-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.floating-toggle .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Responsividade para telas menores */
+@media only screen and (max-width: 768px) {
+  .floating-toggle {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .floating-toggle .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}

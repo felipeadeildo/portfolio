@@ -7,7 +7,7 @@ minify_html = true
 generate_feeds = true
 generate_sitemap = true
 build_search_index = true
-theme = "anemone"
+theme = "anemone-custom"
 
 # Taxonomies
 taxonomies = [
