@@ -1,0 +1,48 @@
+# General
+base_url = "https://felipeadeildo.com"
+title = "Felipe Adeildo - Portfólio"
+description = "WebScrapper e Entusiasta de IA"
+compile_sass = true
+minify_html = true
+generate_feeds = true
+generate_sitemap = true
+build_search_index = true
+theme = "anemone"
+
+# Taxonomies
+taxonomies = [
+    {name = "tags", feed = true, paginate_by = 10},
+]
+
+[markdown]
+render_emoji = true
+external_links_target_blank = true
+smart_punctuation = true
+highlight_code = true
+highlight_theme = "gruvbox-dark"
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+[link_checker]
+internal_level = "warn"
+
+# Extra
+[extra]
+author = "Felipe Adeildo"
+favicon = "favicon.ico"
+list_pages = false
+twitter_card = true
+enable_search = true
+google_analytics = "G-P9C71V55JE"
+display_author = true
+
+## Navigation
+header_nav = [
+  { url = "/", name_en = "/home" },
+  { url = "/about/", name_en = "/about" },
+  { url = "/projects/", name_en = "/projects" },
+  { url = "/posts/", name_en = "/blog" },
+]
