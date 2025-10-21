@@ -12,19 +12,18 @@
         dataLayer.push(arguments)
       }
       gtag('js', new Date())
-
       gtag('config', 'G-P9C71V55JE')
     </script>
 
     <!-- Metadados -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Felipe Adeildo - Portfólio</title>
+    <title>Felipe Adeildo - Software Engineer & AI Enthusiast</title>
 
     <!-- Meta Tags para SEO -->
     <meta
       name="description"
-      content="Felipe Adeildo - WebScrapper e Entusiasta de IA"
+      content="Felipe Adeildo - Software Engineer, Web Scraping Specialist & AI Enthusiast"
     />
 
     <!-- Ícones -->
@@ -36,10 +35,10 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://felipeadeildo.com/" />
-    <meta property="og:title" content="Felipe Adeildo - Portfólio" />
+    <meta property="og:title" content="Felipe Adeildo - Software Engineer" />
     <meta
       property="og:description"
-      content="WebScrapper e Entusiasta de IA. Confira meus projetos e entre em contato."
+      content="Software Engineer, Web Scraping Specialist & AI Enthusiast"
     />
     <meta
       property="og:image"
@@ -49,1067 +48,1153 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://felipeadeildo.com/" />
-    <meta property="twitter:title" content="Felipe Adeildo - Portfólio" />
+    <meta property="twitter:title" content="Felipe Adeildo - Software Engineer" />
     <meta
       property="twitter:description"
-      content="WebScrapper e Entusiasta de IA. Confira meus projetos e entre em contato."
+      content="Software Engineer, Web Scraping Specialist & AI Enthusiast"
     />
     <meta
       property="twitter:image"
       content="https://felipeadeildo.com/twitter-card.jpg"
     />
 
-    <!-- Preload de fontes críticas -->
+    <!-- Preload de fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      as="style"
-    />
-    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
     />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- AOS Animation Library -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
+
+    <style>
+      /* Catppuccin Mocha Colors */
+      :root {
+        --ctp-base: #1e1e2e;
+        --ctp-mantle: #181825;
+        --ctp-crust: #11111b;
+        --ctp-surface0: #313244;
+        --ctp-surface1: #45475a;
+        --ctp-surface2: #585b70;
+        --ctp-overlay0: #6c7086;
+        --ctp-overlay1: #7f849c;
+        --ctp-overlay2: #9399b2;
+        --ctp-text: #cdd6f4;
+        --ctp-subtext0: #a6adc8;
+        --ctp-subtext1: #bac2de;
+        --ctp-lavender: #b4befe;
+        --ctp-blue: #89b4fa;
+        --ctp-sky: #89dceb;
+        --ctp-teal: #94e2d5;
+        --ctp-green: #a6e3a1;
+        --ctp-yellow: #f9e2af;
+        --ctp-peach: #fab387;
+        --ctp-maroon: #eba0ac;
+        --ctp-red: #f38ba8;
+        --ctp-mauve: #cba6f7;
+        --ctp-pink: #f5c2e7;
+        --ctp-flamingo: #f2cdcd;
+        --ctp-rosewater: #f5e0dc;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--ctp-base);
+        color: var(--ctp-text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      /* Navbar */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(17, 17, 27, 0.8);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--ctp-surface0);
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      nav.scrolled {
+        background: rgba(17, 17, 27, 0.95);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--ctp-mauve);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .nav-logo:hover {
+        color: var(--ctp-lavender);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--ctp-subtext1);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        font-size: 0.95rem;
+      }
+
+      .nav-links a:hover {
+        color: var(--ctp-mauve);
+      }
+
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--ctp-text);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6rem 2rem 2rem;
+        background: linear-gradient(135deg, var(--ctp-crust) 0%, var(--ctp-base) 50%, var(--ctp-mantle) 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(circle at 20% 30%, rgba(203, 166, 247, 0.05) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(137, 180, 250, 0.05) 0%, transparent 50%);
+        pointer-events: none;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+        z-index: 1;
+      }
+
+      .hero-tag {
+        display: inline-block;
+        color: var(--ctp-green);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+        background: rgba(166, 227, 161, 0.1);
+        border: 1px solid rgba(166, 227, 161, 0.2);
+        border-radius: 6px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+        background: linear-gradient(135deg, var(--ctp-text) 0%, var(--ctp-mauve) 50%, var(--ctp-blue) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        color: var(--ctp-subtext0);
+        margin-bottom: 2rem;
+        font-weight: 400;
+      }
+
+      .hero-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .tag {
+        padding: 0.5rem 1rem;
+        background: var(--ctp-surface0);
+        border: 1px solid var(--ctp-surface1);
+        border-radius: 6px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.85rem;
+        color: var(--ctp-subtext1);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .tag i {
+        color: var(--ctp-mauve);
+      }
+
+      .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .btn {
+        padding: 0.875rem 1.75rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+      }
+
+      .btn-primary {
+        background: var(--ctp-mauve);
+        color: var(--ctp-crust);
+        border: 2px solid var(--ctp-mauve);
+      }
+
+      .btn-primary:hover {
+        background: transparent;
+        color: var(--ctp-mauve);
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--ctp-text);
+        border: 2px solid var(--ctp-surface1);
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--ctp-blue);
+        color: var(--ctp-blue);
+        transform: translateY(-2px);
+      }
+
+      /* Section Styling */
+      section {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-tag {
+        color: var(--ctp-mauve);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      .section-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        color: var(--ctp-text);
+        margin-bottom: 1rem;
+      }
+
+      .section-description {
+        color: var(--ctp-subtext0);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* About Section */
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
+
+      .about-text {
+        color: var(--ctp-subtext1);
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      .about-text p {
+        margin-bottom: 1.5rem;
+      }
+
+      .about-stats {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .stat-card {
+        background: var(--ctp-surface0);
+        border: 1px solid var(--ctp-surface1);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .stat-card:hover {
+        border-color: var(--ctp-mauve);
+        transform: translateY(-2px);
+      }
+
+      .stat-card h3 {
+        color: var(--ctp-mauve);
+        font-size: 0.85rem;
+        font-family: 'JetBrains Mono', monospace;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .stat-card p {
+        color: var(--ctp-text);
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      /* Projects Section */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .project-card {
+        background: var(--ctp-surface0);
+        border: 1px solid var(--ctp-surface1);
+        border-radius: 12px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--ctp-mauve), var(--ctp-blue));
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .project-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .project-card:hover {
+        border-color: var(--ctp-mauve);
+        transform: translateY(-4px);
+      }
+
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 1rem;
+      }
+
+      .project-icon {
+        font-size: 2rem;
+        color: var(--ctp-mauve);
+      }
+
+      .project-type {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.75rem;
+        background: rgba(203, 166, 247, 0.1);
+        color: var(--ctp-mauve);
+        border-radius: 4px;
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      .project-card h3 {
+        font-size: 1.5rem;
+        color: var(--ctp-text);
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+      }
+
+      .project-card p {
+        color: var(--ctp-subtext0);
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+      }
+
+      .project-link {
+        color: var(--ctp-blue);
+        text-decoration: none;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: gap 0.3s ease;
+      }
+
+      .project-link:hover {
+        gap: 0.75rem;
+      }
+
+      /* Experience Section */
+      .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 3rem;
+      }
+
+      .experience-item {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 2rem;
+        position: relative;
+      }
+
+      .experience-item::before {
+        content: '';
+        position: absolute;
+        left: 200px;
+        top: 0;
+        bottom: -3rem;
+        width: 2px;
+        background: var(--ctp-surface1);
+      }
+
+      .experience-item:last-child::before {
+        display: none;
+      }
+
+      .experience-date {
+        text-align: right;
+      }
+
+      .experience-date .year {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1rem;
+        color: var(--ctp-mauve);
+        font-weight: 600;
+      }
+
+      .experience-date .duration {
+        font-size: 0.85rem;
+        color: var(--ctp-subtext0);
+        margin-top: 0.25rem;
+      }
+
+      .experience-content {
+        background: var(--ctp-surface0);
+        border: 1px solid var(--ctp-surface1);
+        border-radius: 12px;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .experience-content::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 2rem;
+        width: 12px;
+        height: 12px;
+        background: var(--ctp-mauve);
+        border-radius: 50%;
+        border: 3px solid var(--ctp-base);
+      }
+
+      .experience-content h3 {
+        font-size: 1.5rem;
+        color: var(--ctp-text);
+        margin-bottom: 0.5rem;
+      }
+
+      .experience-content .company {
+        color: var(--ctp-blue);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+
+      .experience-content p {
+        color: var(--ctp-subtext0);
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+
+      .experience-content ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .experience-content ul li {
+        color: var(--ctp-subtext0);
+        padding-left: 1.5rem;
+        position: relative;
+        margin-bottom: 0.5rem;
+      }
+
+      .experience-content ul li::before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--ctp-mauve);
+      }
+
+      /* Contact Section */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+
+      .contact-card {
+        background: var(--ctp-surface0);
+        border: 1px solid var(--ctp-surface1);
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .contact-card:hover {
+        border-color: var(--ctp-mauve);
+        transform: translateY(-4px);
+      }
+
+      .contact-card i {
+        font-size: 2.5rem;
+        color: var(--ctp-mauve);
+      }
+
+      .contact-card span {
+        color: var(--ctp-text);
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .contact-card .handle {
+        color: var(--ctp-subtext0);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.9rem;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--ctp-crust);
+        border-top: 1px solid var(--ctp-surface0);
+        padding: 2rem;
+        text-align: center;
+      }
+
+      footer p {
+        color: var(--ctp-subtext0);
+        font-size: 0.9rem;
+      }
+
+      /* Wakatime embed */
+      .wakatime-container {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background: var(--ctp-surface0);
+        border: 1px solid var(--ctp-surface1);
+        border-radius: 12px;
+      }
+
+      .wakatime-container h4 {
+        color: var(--ctp-mauve);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-links {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: var(--ctp-crust);
+          flex-direction: column;
+          padding: 2rem;
+          gap: 1rem;
+          border-top: 1px solid var(--ctp-surface0);
+          display: none;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-toggle {
+          display: block;
+        }
+
+        .about-content,
+        .experience-item {
+          grid-template-columns: 1fr;
+        }
+
+        .experience-item::before {
+          display: none;
+        }
+
+        .experience-date {
+          text-align: left;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Scroll indicator */
+      .scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bounce 2s infinite;
+      }
+
+      .scroll-indicator i {
+        color: var(--ctp-mauve);
+        font-size: 2rem;
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0) translateX(-50%);
+        }
+        40% {
+          transform: translateY(-20px) translateX(-50%);
+        }
+        60% {
+          transform: translateY(-10px) translateX(-50%);
+        }
+      }
+
+      /* Back to top button */
+      .back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 50px;
+        height: 50px;
+        background: var(--ctp-mauve);
+        color: var(--ctp-crust);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background: var(--ctp-lavender);
+        transform: translateY(-4px);
+      }
+    </style>
   </head>
-  <body class="bg-gray-100 font-sans leading-normal tracking-normal">
-    <!-- Navbar -->
-    <nav
-      class="fixed top-0 w-full bg-transparent text-white shadow-lg z-50 transition-all duration-300"
-      id="navbar"
-    >
-      <div class="container mx-auto px-4 py-3">
-        <div class="flex justify-between items-center">
-          <a
-            href="#home"
-            class="text-2xl font-bold text-yellow-400 flex items-center"
-          >
-            <img
-              src="duck.png"
-              alt="Logo"
-              class="w-10 h-10 mr-2 transition-transform duration-300 hover:rotate-12"
-            />
-            <span class="hover:text-yellow-300 transition-colors duration-300">
-              Felipe Adeildo
-            </span>
-          </a>
-          <div class="hidden md:flex space-x-6">
-            <a
-              href="#home"
-              class="nav-link hover:text-yellow-400 transition-colors duration-300"
-            >
-              <i class="fas fa-home mr-2"></i>Início
-            </a>
-            <a
-              href="#about"
-              class="nav-link hover:text-yellow-400 transition-colors duration-300"
-            >
-              <i class="fas fa-user mr-2"></i>Sobre
-            </a>
-            <a
-              href="#projects"
-              class="nav-link hover:text-yellow-400 transition-colors duration-300"
-            >
-              <i class="fas fa-briefcase mr-2"></i>Projetos
-            </a>
-            <a
-              href="#experience"
-              class="nav-link hover:text-yellow-400 transition-colors duration-300"
-            >
-              <i class="fas fa-clock mr-2"></i>Experiência
-            </a>
-            <a
-              href="#contact"
-              class="nav-link hover:text-yellow-400 transition-colors duration-300"
-            >
-              <i class="fas fa-envelope mr-2"></i>Contato
-            </a>
-          </div>
-          <div class="md:hidden">
-            <button
-              id="menu-toggle"
-              class="text-white focus:outline-none hover:text-yellow-400 transition-colors duration-300"
-            >
-              <i class="fas fa-bars text-xl"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- Menu Mobile -->
-      <div id="mobile-menu" class="md:hidden hidden bg-purple-900/95 p-4">
-        <a
-          href="#home"
-          class="block py-2 px-4 text-sm hover:bg-purple-700 hover:text-yellow-400 transition-colors duration-300 flex items-center"
-          ><i class="fas fa-home mr-2"></i>Início</a
-        >
-        <a
-          href="#about"
-          class="block py-2 px-4 text-sm hover:bg-purple-700 hover:text-yellow-400 transition-colors duration-300 flex items-center"
-          ><i class="fas fa-user mr-2"></i>Sobre</a
-        >
-        <a
-          href="#skills"
-          class="block py-2 px-4 text-sm hover:bg-purple-700 hover:text-yellow-400 transition-colors duration-300 flex items-center"
-          ><i class="fas fa-graduation-cap mr-2"></i>Habilidades</a
-        >
-        <a
-          href="#projects"
-          class="block py-2 px-4 text-sm hover:bg-purple-700 hover:text-yellow-400 transition-colors duration-300 flex items-center"
-          ><i class="fas fa-briefcase mr-2"></i>Projetos</a
-        >
-        <a
-          href="#experience"
-          class="block py-2 px-4 text-sm hover:bg-purple-700 hover:text-yellow-400 transition-colors duration-300 flex items-center"
-          ><i class="fas fa-clock mr-2"></i>Experiência</a
-        >
-        <a
-          href="#contact"
-          class="block py-2 px-4 text-sm hover:bg-purple-700 hover:text-yellow-400 transition-colors duration-300 flex items-center"
-          ><i class="fas fa-envelope mr-2"></i>Contato</a
-        >
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo mono">
+          <img src="duck.png" alt="Logo" style="width: 32px; height: 32px;" />
+          felipe.dev
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">about</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#experience">experience</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section
-      id="home"
-      class="pt-28 pb-24 bg-gradient-to-r from-indigo-600 to-purple-600 text-white min-h-screen flex items-center relative overflow-hidden"
-    >
-      <div class="absolute inset-0 overflow-hidden">
-        <div
-          class="absolute h-40 w-40 bg-yellow-300 rounded-full top-20 left-10 mix-blend-multiply filter blur-xl opacity-70 animate-blob"
-        ></div>
-        <div
-          class="absolute h-40 w-40 bg-indigo-300 rounded-full top-0 right-10 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"
-        ></div>
-        <div
-          class="absolute h-40 w-40 bg-pink-300 rounded-full bottom-20 left-20 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"
-        ></div>
-      </div>
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-          <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">
-              Olá, Eu sou <span class="text-yellow-300">Felipe Adeildo</span>
-              <img
-                src="duck.png"
-                alt="Duck Icon"
-                class="inline w-12 h-12 ml-2 floating"
-              />
-            </h1>
-            <div class="flex flex-wrap justify-center md:justify-start gap-4">
-              <span
-                class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-full px-4 py-2 text-sm font-semibold"
-              >
-                <i class="fas fa-spider mr-2"></i>WebScrapper
-              </span>
-              <span
-                class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-full px-4 py-2 text-sm font-semibold"
-              >
-                <i class="fas fa-robot mr-2"></i>Entusiasta de IA
-              </span>
-            </div>
-            <div class="mt-8 flex justify-center md:justify-start space-x-4">
-              <a
-                href="#contact"
-                class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 hover:shadow-lg flex items-center"
-              >
-                <i class="fas fa-envelope mr-2"></i>
-                Contate-me
-              </a>
-              <a
-                href="#projects"
-                class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-indigo-600 transition duration-300 transform hover:scale-105 hover:shadow-lg flex items-center"
-              >
-                <i class="fas fa-briefcase mr-2"></i>
-                Ver Projetos
-              </a>
-              <a
-                href="https://drive.google.com/drive/folders/1Jl3jlpc-Je1mnatpO3k0-HnpMH_Zh_C_?usp=drive_link"
-                target="_blank"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 hover:shadow-lg flex items-center"
-              >
-                <i class="fas fa-certificate mr-2"></i>
-                Ver Certificados
-              </a>
-            </div>
-          </div>
-          <div class="md:w-1/2 mt-12 md:mt-0" data-aos="fade-left">
-            <img
-              src="profile.png"
-              alt="Felipe Adeildo"
-              class="rounded-full w-64 h-64 mx-auto border-4 border-white shadow-lg"
-            />
-          </div>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="hero-tag">// Available for opportunities</span>
+        <h1>Felipe Adeildo</h1>
+        <p class="hero-subtitle">Software Engineer & AI Enthusiast</p>
+        <div class="hero-tags">
+          <span class="tag"><i class="fas fa-code"></i> Full Stack Dev</span>
+          <span class="tag"><i class="fas fa-spider"></i> Web Scraping</span>
+          <span class="tag"><i class="fas fa-robot"></i> AI/ML</span>
+          <span class="tag"><i class="fas fa-database"></i> Data Engineering</span>
         </div>
-      </div>
-      <button
-        class="scroll-down-btn absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white"
-      >
-        <i class="fas fa-chevron-down text-3xl animate-bounce"></i>
-      </button>
-    </section>
-
-    <!-- Sobre Mim -->
-    <section id="about" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-4xl font-bold text-center text-gray-800 mb-12"
-          data-aos="fade-up"
-        >
-          Sobre Mim
-        </h2>
-        <div class="flex flex-col md:flex-row items-center justify-between">
-          <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
-            <img
-              src="about-image.jpg"
-              alt="Felipe trabalhando"
-              class="rounded-lg shadow-2xl"
-            />
-          </div>
-          <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
-            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-              Minha jornada na tecnologia começou no ensino fundamental,
-              trabalhando com o Laboratório de Estatística e Ciência de Dados da
-              UFAL sob orientação do Professor Krerley.
-            </p>
-            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-              Durante o ensino médio, participei ativamente no desenvolvimento
-              de aplicações e pesquisas focadas em análise de dados,
-              especialmente em execuções fiscais e epidemiologia.
-            </p>
-            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-              Atualmente, sou graduando em Bacharelado em Ciência da Computação
-              pelo Insper Instituto de Ensino e Pesquisa.
-            </p>
-            <div class="mt-8 mb-8">
-              <h3 class="text-xl font-bold text-gray-800 mb-4">
-                Meu Tempo de Código
-              </h3>
-              <a
-                href="https://wakatime.com/@8aa702bf-29dc-44df-94de-b7f6dabd91fe"
-              >
-                <img
-                  src="https://wakatime.com/badge/user/8aa702bf-29dc-44df-94de-b7f6dabd91fe.svg"
-                  alt="Total time coded since May 14 2023"
-                />
-              </a>
-              <figure>
-                <embed
-                  src="https://wakatime.com/share/@felipeadeildo/2389878c-0dca-4b95-8463-f4fb072571b8.svg"
-                />
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projetos -->
-    <section id="projects" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-4xl font-bold text-center text-gray-800 mb-12"
-          data-aos="fade-up"
-        >
-          Projetos
-        </h2>
-
-        <!-- Projetos Privados -->
-        <div class="mb-16">
-          <h3 class="text-2xl font-bold text-gray-800 mb-6" data-aos="fade-up">
-            Projetos Privados em Destaque
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Hércules -->
-            <div
-              class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl"
-              data-aos="fade-up"
-            >
-              <div
-                class="relative h-48 bg-gradient-to-r from-purple-500 to-indigo-600"
-              >
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="text-white text-2xl font-bold text-center">
-                    <i class="fas fa-balance-scale mr-2"></i>
-                    Projeto Hércules
-                  </div>
-                </div>
-              </div>
-              <div class="p-6">
-                <p class="text-gray-600 mb-4">
-                  Sistema desenvolvido para a 15ª Vara de Execuções Fiscais de
-                  Maceió. Automatização completa do processo de execução fiscal,
-                  desde a distribuição até a sentença, com integração ao PJe.
-                </p>
-              </div>
-            </div>
-
-            <!-- OLIM -->
-            <div
-              class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl"
-              data-aos="fade-up"
-            >
-              <div
-                class="relative h-48 bg-gradient-to-r from-green-500 to-blue-600"
-              >
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="text-white text-2xl font-bold text-center">
-                    <i class="fas fa-tag mr-2"></i>
-                    OLIM - Open Labeller for Iterative Machine learning
-                  </div>
-                </div>
-              </div>
-              <div class="p-6">
-                <p class="text-gray-600 mb-4">
-                  Ferramenta especializada para criação e gestão de bases de
-                  texto rotuladas, facilitando o treinamento de algoritmos de
-                  IA. Desenvolvida com foco em processamento de linguagem
-                  natural.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projetos Públicos -->
-        <div>
-          <h3 class="text-2xl font-bold text-gray-800 mb-6" data-aos="fade-up">
-            Projetos Públicos
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Cantina CF -->
-            <div
-              class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl"
-              data-aos="fade-up"
-            >
-              <div class="relative h-48">
-                <img
-                  src="projeto-cantinacf.png"
-                  alt="Cantina Escolar"
-                  class="absolute inset-0 object-cover w-full h-full"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-50"
-                ></div>
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="text-white text-2xl font-bold text-center">
-                    <i class="fas fa-laptop-code mr-2"></i>
-                    Cantina Escolar - Colégio Fantástico
-                  </div>
-                </div>
-              </div>
-              <div class="p-6">
-                <p class="text-gray-600 mb-4">
-                  Sistema de gerenciamento para cantina escolar do colégio que
-                  estudei.
-                </p>
-                <a
-                  href="https://github.com/felipeadeildo/CantinaCF"
-                  target="_blank"
-                  class="text-indigo-600 hover:text-indigo-800 font-bold inline-flex items-center"
-                >
-                  Ver no GitHub
-                  <i class="fas fa-arrow-circle-right ml-2"></i>
-                </a>
-              </div>
-            </div>
-
-            <!-- AutoSinan -->
-            <div
-              class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl"
-              data-aos="fade-up"
-            >
-              <div class="relative h-48">
-                <img
-                  src="projeto-autosinan.jpg"
-                  alt="AutoSinan"
-                  class="absolute inset-0 object-cover w-full h-full"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-50"
-                ></div>
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="text-white text-2xl font-bold">
-                    <i class="fas fa-robot mr-2"></i>
-                    AutoSinan
-                  </div>
-                </div>
-              </div>
-              <div class="p-6">
-                <p class="text-gray-600 mb-4">
-                  Bot de automação para preenchimento eficiente de notificações
-                  no sistema Sinan da saúde pública brasileira.
-                </p>
-                <a
-                  href="https://github.com/felipeadeildo/autosinan"
-                  target="_blank"
-                  class="text-indigo-600 hover:text-indigo-800 font-bold inline-flex items-center"
-                >
-                  Ver no GitHub
-                  <i class="fas fa-arrow-circle-right ml-2"></i>
-                </a>
-              </div>
-            </div>
-
-            <!-- Gestão Oncológica -->
-            <div
-              class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl"
-              data-aos="fade-up"
-            >
-              <div class="relative h-48">
-                <img
-                  src="projeto-oncologia.jpg"
-                  alt="Gestão de Pacientes Oncológicos"
-                  class="absolute inset-0 object-cover w-full h-full"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-50"
-                ></div>
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="text-white text-2xl font-bold text-center">
-                    <i class="fas fa-hospital mr-2"></i>
-                    Gestão de Pacientes Oncológicos
-                  </div>
-                </div>
-              </div>
-              <div class="p-6">
-                <p class="text-gray-600 mb-4">
-                  Solução inovadora para gerenciamento de pacientes oncológicos,
-                  desenvolvida durante o Workshop da FGV.
-                </p>
-                <a
-                  href="https://github.com/NES-Collaborate/oncologia"
-                  target="_blank"
-                  class="text-indigo-600 hover:text-indigo-800 font-bold inline-flex items-center"
-                >
-                  Ver no GitHub
-                  <i class="fas fa-arrow-circle-right ml-2"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-12">
-          <a
-            href="https://github.com/felipeadeildo?tab=repositories"
-            target="_blank"
-            class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105"
-          >
-            Ver Mais Projetos no GitHub
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-envelope"></i>
+            Get in touch
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            <i class="fas fa-code"></i>
+            View projects
+          </a>
+          <a href="https://drive.google.com/drive/folders/1Jl3jlpc-Je1mnatpO3k0-HnpMH_Zh_C_?usp=drive_link" target="_blank" class="btn btn-secondary">
+            <i class="fas fa-certificate"></i>
+            Certificates
           </a>
         </div>
       </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </section>
 
-    <!-- Experiência -->
-    <section id="experience" class="py-20 bg-gray-100">
-      <div class="container mx-auto px-6 space-y-12">
-        <h2
-          class="text-4xl font-bold text-center text-gray-800 mb-12"
-          data-aos="fade-up"
-        >
-          Experiência Profissional
-        </h2>
-
-        <!-- Verdora -->
-        <div class="flex flex-col md:flex-row" data-aos="fade-up">
-          <div class="md:w-1/3">
-            <h3 class="text-xl font-semibold text-indigo-600">
-              Founder AI Engineer
-            </h3>
-            <p class="text-gray-600">Verdora</p>
-            <p class="text-gray-500">jun 2025 - presente</p>
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-header">
+        <span class="section-tag">// Who I am</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            My tech journey started in elementary school, working at UFAL's Statistics
+            and Data Science Laboratory under Professor Krerley's guidance. Since then,
+            I've been passionate about building solutions that matter.
+          </p>
+          <p>
+            During high school, I actively participated in developing applications and
+            research focused on data analysis, particularly in fiscal executions and
+            epidemiology. These experiences shaped my problem-solving approach and
+            technical skills.
+          </p>
+          <p>
+            Currently, I'm pursuing a Bachelor's degree in Computer Science at Insper
+            Instituto de Ensino e Pesquisa, while working as a Founding AI Engineer at
+            Verdora and as a Ninja (teaching assistant) at Insper.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <h3>CURRENT FOCUS</h3>
+            <p>Building AI-powered solutions for agriculture at Verdora and mentoring future developers</p>
           </div>
-          <div
-            class="md:w-2/3 mt-4 md:mt-0 md:pl-8 border-l-2 border-indigo-200 relative"
-          >
-            <div
-              class="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-1.5"
-            ></div>
-            <p class="text-gray-700 mb-4">
-              Founding AI Engineer na Verdora Agro, trabalhando no desenvolvimento de soluções de inteligência artificial para o setor agrícola.
+          <div class="stat-card">
+            <h3>SPECIALTIES</h3>
+            <p>Full-stack development, web scraping automation, ML/AI implementation, and data engineering</p>
+          </div>
+          <div class="wakatime-container">
+            <h4>CODING TIME</h4>
+            <a href="https://wakatime.com/@8aa702bf-29dc-44df-94de-b7f6dabd91fe">
+              <img
+                src="https://wakatime.com/badge/user/8aa702bf-29dc-44df-94de-b7f6dabd91fe.svg"
+                alt="Total time coded since May 14 2023"
+              />
+            </a>
+            <figure style="margin-top: 1rem;">
+              <embed
+                src="https://wakatime.com/share/@felipeadeildo/2389878c-0dca-4b95-8463-f4fb072571b8.svg"
+                style="width: 100%;"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="section-header">
+        <span class="section-tag">// What I've built</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+
+      <h3 style="color: var(--ctp-text); margin-bottom: 2rem; font-size: 1.5rem;">
+        <span class="mono" style="color: var(--ctp-mauve);">#</span> Private Projects
+      </h3>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fas fa-balance-scale project-icon"></i>
+            <span class="project-type">PRIVATE</span>
+          </div>
+          <h3>Projeto Hércules</h3>
+          <p>
+            Complete automation system for the 15th Tax Enforcement Court of Maceió.
+            Handles the entire fiscal execution process from distribution to sentencing,
+            with full PJe integration.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fas fa-tag project-icon"></i>
+            <span class="project-type">PRIVATE</span>
+          </div>
+          <h3>OLIM</h3>
+          <p>
+            Open Labeller for Iterative Machine learning. Specialized tool for creating
+            and managing labeled text datasets, facilitating AI algorithm training with
+            focus on NLP.
+          </p>
+        </div>
+      </div>
+
+      <h3 style="color: var(--ctp-text); margin: 4rem 0 2rem; font-size: 1.5rem;">
+        <span class="mono" style="color: var(--ctp-blue);">#</span> Open Source
+      </h3>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fas fa-laptop-code project-icon"></i>
+            <span class="project-type">PUBLIC</span>
+          </div>
+          <h3>Cantina CF</h3>
+          <p>
+            School cafeteria management system for Colégio Fantástico.
+            Built to streamline operations and improve service quality.
+          </p>
+          <a href="https://github.com/felipeadeildo/CantinaCF" target="_blank" class="project-link">
+            View on GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fas fa-robot project-icon"></i>
+            <span class="project-type">PUBLIC</span>
+          </div>
+          <h3>AutoSinan</h3>
+          <p>
+            Automation bot for efficient notification filling in Brazil's public
+            health Sinan system. Significantly reduces manual data entry time.
+          </p>
+          <a href="https://github.com/felipeadeildo/autosinan" target="_blank" class="project-link">
+            View on GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <i class="fas fa-hospital project-icon"></i>
+            <span class="project-type">PUBLIC</span>
+          </div>
+          <h3>Oncology Patient Management</h3>
+          <p>
+            Innovative solution for managing oncological patients, developed during
+            FGV's Workshop. Focuses on improving patient care and data tracking.
+          </p>
+          <a href="https://github.com/NES-Collaborate/oncologia" target="_blank" class="project-link">
+            View on GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://github.com/felipeadeildo?tab=repositories" target="_blank" class="btn btn-secondary">
+          <i class="fab fa-github"></i>
+          View all projects
+        </a>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="section-header">
+        <span class="section-tag">// My journey</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="experience-list">
+        <!-- Verdora -->
+        <div class="experience-item">
+          <div class="experience-date">
+            <div class="year">2025 - Present</div>
+            <div class="duration">6+ months</div>
+          </div>
+          <div class="experience-content">
+            <h3>Founding AI Engineer</h3>
+            <p class="company">Verdora</p>
+            <p>
+              Developing AI-powered solutions for the agricultural sector, working
+              on cutting-edge machine learning applications to optimize farming operations.
             </p>
           </div>
         </div>
 
         <!-- Insper Ninja -->
-        <div class="flex flex-col md:flex-row" data-aos="fade-up">
-          <div class="md:w-1/3">
-            <h3 class="text-xl font-semibold text-indigo-600">
-              Ninja
-            </h3>
-            <p class="text-gray-600">Insper Instituto de Ensino e Pesquisa</p>
-            <p class="text-gray-500">jul 2025 - presente</p>
+        <div class="experience-item">
+          <div class="experience-date">
+            <div class="year">2025 - Present</div>
+            <div class="duration">3+ months</div>
           </div>
-          <div
-            class="md:w-2/3 mt-4 md:mt-0 md:pl-8 border-l-2 border-indigo-200 relative"
-          >
-            <div
-              class="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-1.5"
-            ></div>
-            <p class="text-gray-700 mb-4">
-              Monitor da matéria Developer Life do curso de Ciência da Computação, 
-              atuando como Ninja para dar aulas e apoiar estudantes no desenvolvimento 
-              de projetos e habilidades técnicas.
+          <div class="experience-content">
+            <h3>Ninja (Teaching Assistant)</h3>
+            <p class="company">Insper Instituto de Ensino e Pesquisa</p>
+            <p>
+              Teaching assistant for Developer Life course in Computer Science program.
+              Supporting students in developing projects and technical skills.
             </p>
           </div>
         </div>
 
         <!-- NES Monitor -->
-        <div class="flex flex-col md:flex-row" data-aos="fade-up">
-          <div class="md:w-1/3">
-            <h3 class="text-xl font-semibold text-indigo-600">
-              Monitor
-            </h3>
-            <p class="text-gray-600">Novo Ensino Suplementar (NES)</p>
-            <p class="text-gray-500">fev 2025 - ago 2025</p>
+        <div class="experience-item">
+          <div class="experience-date">
+            <div class="year">2025</div>
+            <div class="duration">6 months</div>
           </div>
-          <div
-            class="md:w-2/3 mt-4 md:mt-0 md:pl-8 border-l-2 border-indigo-200 relative"
-          >
-            <div
-              class="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-1.5"
-            ></div>
-            <p class="text-gray-700 mb-4">
-              Monitor remoto no Novo Ensino Suplementar, apoiando estudantes em disciplinas técnicas e oferecendo suporte educacional.
+          <div class="experience-content">
+            <h3>Remote Monitor</h3>
+            <p class="company">Novo Ensino Suplementar (NES)</p>
+            <p>
+              Remote teaching assistant supporting students in technical disciplines
+              and providing educational assistance.
             </p>
           </div>
         </div>
 
         <!-- Taquar -->
-        <div class="flex flex-col md:flex-row" data-aos="fade-up">
-          <div class="md:w-1/3">
-            <h3 class="text-xl font-semibold text-indigo-600">
-              Full Stack Developer & AI Engineer
-            </h3>
-            <p class="text-gray-600">Taquar</p>
-            <p class="text-gray-500">jul 2024 - jun 2025</p>
+        <div class="experience-item">
+          <div class="experience-date">
+            <div class="year">2024 - 2025</div>
+            <div class="duration">1 year</div>
           </div>
-          <div
-            class="md:w-2/3 mt-4 md:mt-0 md:pl-8 border-l-2 border-indigo-200 relative"
-          >
-            <div
-              class="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-1.5"
-            ></div>
-            <p class="text-gray-700 mb-4">
-              Atuei no desenvolvimento de soluções nesta corretora de
-              intangíveis, trabalhando com tecnologias de ponta para análise de
-              patentes do INPI (Instituto Nacional da Propriedade Industrial),
-              trabalhando desde a extração de dados até a análise de dados em
-              cima dos dados textuais em larga escala
+          <div class="experience-content">
+            <h3>Full Stack Developer & AI Engineer</h3>
+            <p class="company">Taquar</p>
+            <p>
+              Developed solutions for this intangibles brokerage, working with
+              cutting-edge technologies for INPI patent analysis.
             </p>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-              <li>
-                Desenvolvimento fullstack de plataformas de análise de
-                propriedade intelectual
-              </li>
-              <li>Implementação de sistemas de embedding e machine learning</li>
-              <li>
-                Criação de ferramentas automatizadas para análise de patentes
-              </li>
+            <ul>
+              <li>Full-stack development of intellectual property analysis platforms</li>
+              <li>Implementation of embedding systems and machine learning</li>
+              <li>Creation of automated tools for large-scale patent analysis</li>
             </ul>
           </div>
         </div>
 
         <!-- LED UFAL -->
-        <div class="flex flex-col md:flex-row" data-aos="fade-up">
-          <div class="md:w-1/3">
-            <h3 class="text-xl font-semibold text-indigo-600">Pesquisador</h3>
-            <p class="text-gray-600">
-              Laboratório de Estatística e Dados - UFAL
-            </p>
-            <p class="text-gray-500">2022 - 2024</p>
+        <div class="experience-item">
+          <div class="experience-date">
+            <div class="year">2022 - 2024</div>
+            <div class="duration">2 years</div>
           </div>
-          <div
-            class="md:w-2/3 mt-4 md:mt-0 md:pl-8 border-l-2 border-indigo-200 relative"
-          >
-            <div
-              class="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-1.5"
-            ></div>
-            <p class="text-gray-700 mb-4">
-              Participei de projetos de pesquisa focados em análise de dados e
-              automação, contribuindo para estudos em saúde pública e
-              fiscalização.
+          <div class="experience-content">
+            <h3>Researcher</h3>
+            <p class="company">Laboratório de Estatística e Dados - UFAL</p>
+            <p>
+              Participated in research projects focused on data analysis and automation,
+              contributing to studies in public health and oversight.
             </p>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-              <li>
-                Desenvolvimento de sistemas de automação e extração de dados
-              </li>
-              <li>Implementação de soluções para o Sinan Online</li>
-              <li>Pesquisa aplicada em ciência de dados</li>
+            <ul>
+              <li>Development of automation and data extraction systems</li>
+              <li>Implementation of solutions for Sinan Online</li>
+              <li>Applied research in data science</li>
             </ul>
           </div>
         </div>
 
         <!-- IMPA -->
-        <div class="flex flex-col md:flex-row" data-aos="fade-up">
-          <div class="md:w-1/3">
-            <h3 class="text-xl font-semibold text-indigo-600">
-              Contribuição Técnica
-            </h3>
-            <p class="text-gray-600">IMPA</p>
-            <p class="text-gray-500">2021</p>
+        <div class="experience-item">
+          <div class="experience-date">
+            <div class="year">2021</div>
           </div>
-          <div
-            class="md:w-2/3 mt-4 md:mt-0 md:pl-8 border-l-2 border-indigo-200 relative"
-          >
-            <div
-              class="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-1.5"
-            ></div>
-            <p class="text-gray-700">
-              Aos 13 anos, elaborei um relatório técnico (amador) identificando
-              vulnerabilidades no sistema do programa de iniciação científica,
-              após uma reinicialização não programada devido a uma queda de
-              energia.
+          <div class="experience-content">
+            <h3>Technical Contribution</h3>
+            <p class="company">IMPA</p>
+            <p>
+              At 13 years old, prepared a technical report identifying vulnerabilities
+              in the scientific initiation program's system after an unscheduled restart
+              due to a power outage.
             </p>
           </div>
         </div>
-
-
       </div>
     </section>
 
-    <!-- Formação Acadêmica -->
-    <section id="education" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-4xl font-bold text-center text-gray-800 mb-12"
-          data-aos="fade-up"
-        >
-          Formação Acadêmica
-        </h2>
-        <div class="space-y-12">
-          <!-- Insper Bachelor's -->
-          <div class="flex flex-col md:flex-row" data-aos="fade-up">
-            <div class="md:w-1/3">
-              <h3 class="text-xl font-semibold text-indigo-600">
-                Bacharelado em Ciência da Computação
-              </h3>
-              <p class="text-gray-600">Insper Instituto de Ensino e Pesquisa</p>
-              <p class="text-gray-500">2025 - 2028 (previsto)</p>
-            </div>
-            <div
-              class="md:w-2/3 mt-4 md:mt-0 md:pl-8 border-l-2 border-indigo-200 relative"
-            >
-              <div
-                class="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-1.5"
-              ></div>
-              <p class="text-gray-700 mb-4">
-                Graduação em Ciência da Computação com foco em desenvolvimento de software, 
-                inteligência artificial e inovação tecnológica.
-              </p>
-            </div>
-          </div>
-
-          <!-- Research And Development Assistant - moved from professional experience -->
-          <div class="flex flex-col md:flex-row" data-aos="fade-up">
-            <div class="md:w-1/3">
-              <h3 class="text-xl font-semibold text-indigo-600">
-                Research And Development Assistant
-              </h3>
-              <p class="text-gray-600">FGV EMAp</p>
-              <p class="text-gray-500">fev 2025 - presente</p>
-            </div>
-            <div
-              class="md:w-2/3 mt-4 md:mt-0 md:pl-8 border-l-2 border-indigo-200 relative"
-            >
-              <div
-                class="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-1.5"
-              ></div>
-              <p class="text-gray-700 mb-4">
-                Assistente de Pesquisa e Desenvolvimento na Escola de Matemática Aplicada da FGV, trabalhando em projetos de pesquisa em matemática aplicada e ciência de dados.
-              </p>
-            </div>
-          </div>
-
-          <!-- Educação 1 -->
-          <div class="flex flex-col md:flex-row" data-aos="fade-up">
-            <div class="md:w-1/3">
-              <h3 class="text-xl font-semibold text-indigo-600">
-                Universidade Federal de Alagoas (UFAL)
-              </h3>
-              <p class="text-gray-500">2022 - 2023</p>
-            </div>
-            <div
-              class="md:w-2/3 mt-4 md:mt-0 md:pl-8 border-l-2 border-indigo-200 relative"
-            >
-              <div
-                class="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-1.5"
-              ></div>
-              <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li>Estrutura de Dados</li>
-                <li>Álgebra Linear I</li>
-                <li>Processamento de Linguagem Natural</li>
-                <li>Álgebra Abstrata</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Educação 2 -->
-          <div
-            class="flex flex-col md:flex-row"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="md:w-1/3">
-              <h3 class="text-xl font-semibold text-indigo-600">
-                Novo Ensino Suplementar
-              </h3>
-              <p class="text-gray-500">Fevereiro 2023 - Presente</p>
-            </div>
-            <div
-              class="md:w-2/3 mt-4 md:mt-0 md:pl-8 border-l-2 border-indigo-200 relative"
-            >
-              <div
-                class="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-1.5"
-              ></div>
-              <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li>
-                  Módulo 1: Funções e Matrizes, Probabilidade e Estatística,
-                  Programação Estruturada
-                </li>
-                <li>
-                  Módulo 2: Programação Orientada a Objetos, Álgebra Linear I,
-                  Estrutura de Dados
-                </li>
-                <li>
-                  Módulo 3: Álgebra Linear II, Cálculo para Otimização,
-                  Introdução à IA, Banco de Dados
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Educação 3 -->
-          <div
-            class="flex flex-col md:flex-row"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="md:w-1/3">
-              <h3 class="text-xl font-semibold text-indigo-600">
-                Fundação Getúlio Vargas (FGV) - Verões
-              </h3>
-            </div>
-            <div
-              class="md:w-2/3 mt-4 md:mt-0 md:pl-8 border-l-2 border-indigo-200 relative"
-            >
-              <div
-                class="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-1.5"
-              ></div>
-              <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li>
-                  Fundamentos da Matemática: Uma Introdução à Análise - 2023
-                </li>
-                <li>Introdução à Programação com a Linguagem Python - 2023</li>
-                <li>
-                  Fundamentos da Otimização Multiobjetivo: Métodos, teoria e
-                  aplicações - 2025
-                </li>
-                <li>
-                  Dinâmica em Redes Complexas: Aplicações a Epidemiologia - 2025
-                </li>
-                <li>
-                  The Machine Learning Behind Recommendation Systems - 2025
-                </li>
-                <li>Introdução às Estruturas Algébricas - 2025</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="section-header">
+        <span class="section-tag">// Get in touch</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-description">
+          Always open to new opportunities and collaborations. Feel free to reach out
+          through any of these platforms.
+        </p>
       </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contact" class="py-20 bg-indigo-600 text-white">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">
-          Vamos Conversar!
-        </h2>
-        <div class="flex flex-wrap justify-center items-center gap-6">
-          <a
-            href="https://github.com/felipeadeildo"
-            target="_blank"
-            class="flex items-center bg-white text-indigo-600 py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 hover:bg-gray-100"
-            data-aos="zoom-in"
-          >
-            <i class="fab fa-github text-3xl mr-3"></i>
-            <span class="text-xl font-semibold">GitHub</span>
-          </a>
-          <a
-            href="https://linkedin.com/in/felipeadeildo"
-            target="_blank"
-            class="flex items-center bg-blue-500 hover:bg-blue-600 py-3 px-6 rounded-full transition duration-300 transform hover:scale-105"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
-            <i class="fab fa-linkedin text-3xl mr-3"></i>
-            <span class="text-xl font-semibold">LinkedIn</span>
-          </a>
-          <a
-            href="https://t.me/felipeadeildo"
-            target="_blank"
-            class="flex items-center bg-blue-400 hover:bg-blue-500 py-3 px-6 rounded-full transition duration-300 transform hover:scale-105"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
-            <i class="fab fa-telegram text-3xl mr-3"></i>
-            <span class="text-xl font-semibold">Telegram</span>
-          </a>
-          <!-- <a
-            href="https://instagram.com/felipeadeildo_"
-            target="_blank"
-            class="flex items-center bg-pink-500 hover:bg-pink-600 py-3 px-6 rounded-full transition duration-300 transform hover:scale-105"
-            data-aos="zoom-in"
-            data-aos-delay="300"
-          >
-            <i class="fab fa-instagram text-3xl mr-3"></i>
-            <span class="text-xl font-semibold">Instagram</span>
-          </a> -->
-          <a
-            href="mailto:contato@felipeadeildo.com"
-            class="flex items-center bg-yellow-500 hover:bg-yellow-600 py-3 px-6 rounded-full transition duration-300 transform hover:scale-105"
-            data-aos="zoom-in"
-            data-aos-delay="400"
-          >
-            <i class="fas fa-envelope text-3xl mr-3"></i>
-            <span class="text-xl font-semibold">E-mail</span>
-          </a>
-        </div>
-        <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="500">
-          <p class="text-xl">
-            Sinta-se à vontade para entrar em contato através de qualquer uma
-            dessas plataformas. Estou sempre aberto a novas oportunidades e
-            colaborações!
-          </p>
-        </div>
+      <div class="contact-grid">
+        <a href="https://github.com/felipeadeildo" target="_blank" class="contact-card">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+          <span class="handle">@felipeadeildo</span>
+        </a>
+        <a href="https://linkedin.com/in/felipeadeildo" target="_blank" class="contact-card">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+          <span class="handle">/in/felipeadeildo</span>
+        </a>
+        <a href="https://t.me/felipeadeildo" target="_blank" class="contact-card">
+          <i class="fab fa-telegram"></i>
+          <span>Telegram</span>
+          <span class="handle">@felipeadeildo</span>
+        </a>
+        <a href="mailto:contato@felipeadeildo.com" class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <span>Email</span>
+          <span class="handle">contato@felipeadeildo.com</span>
+        </a>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-4">
-      <div class="container mx-auto px-6 text-center">
-        <p>&copy; 2025 Felipe Adeildo. Todos os direitos reservados.</p>
-        <p class="mt-4 text-sm sr-only">
-          blá blá blá (sim, este é um easter-egg)
-        </p>
-      </div>
+    <footer>
+      <p class="mono">&copy; 2025 Felipe Adeildo. Built with Catppuccin colors.</p>
     </footer>
 
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script>
-      // Inicialização AOS
-      AOS.init({
-        duration: 1000,
-        once: true,
-      })
-
-      // Navegação suave
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault()
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-          })
-        })
-      })
-
       // Navbar scroll effect
-      const navbar = document.getElementById('navbar')
-      const menuToggle = document.getElementById('menu-toggle')
-      const mobileMenu = document.getElementById('mobile-menu')
+      const navbar = document.getElementById('navbar');
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.getElementById('navLinks');
 
       window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-          navbar.classList.add('bg-white', 'shadow-md', 'text-gray-800')
-          navbar.classList.remove('bg-transparent', 'text-white')
-          menuToggle.classList.add('text-gray-800')
-          menuToggle.classList.remove('text-white')
+          navbar.classList.add('scrolled');
         } else {
-          navbar.classList.remove('bg-white', 'shadow-md', 'text-gray-800')
-          navbar.classList.add('bg-transparent', 'text-white')
-          menuToggle.classList.remove('text-gray-800')
-          menuToggle.classList.add('text-white')
+          navbar.classList.remove('scrolled');
         }
-      })
+      });
 
-      // Menu mobile toggle
-      menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden')
-        // Toggle entre ícones de menu e fechar
-        menuToggle.innerHTML = mobileMenu.classList.contains('hidden')
-          ? '<i class="fas fa-bars"></i>'
-          : '<i class="fas fa-times"></i>'
-      })
+      // Mobile menu toggle
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+      });
 
-      // Fechar menu ao clicar em um link
-      mobileMenu.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') {
-          mobileMenu.classList.add('hidden')
-          menuToggle.innerHTML = '<i class="fas fa-bars"></i>'
+      // Close mobile menu when clicking a link
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          const icon = navToggle.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        });
+      });
+
+      // Back to top button
+      const backToTop = document.getElementById('backToTop');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
         }
-      })
+      });
 
-      // Garantir que o menu mobile esteja escondido ao redimensionar para desktop
-      window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-          mobileMenu.classList.add('hidden')
-          menuToggle.innerHTML = '<i class="fas fa-bars"></i>'
-        }
-      })
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
 
-      // GSAP Animations
-      gsap.registerPlugin(ScrollTrigger)
-
-      // Hero section animation
-      gsap.from('.hero-content', {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: '#home',
-          start: 'top center',
-          end: 'bottom center',
-        },
-      })
-
-      // Skill bars animation
-      gsap.utils.toArray('.skill-bar').forEach((bar) => {
-        gsap.to(bar, {
-          width: bar.dataset.progress + '%',
-          duration: 1.5,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: bar,
-            start: 'top 80%',
-          },
-        })
-      })
-
-      // Project cards animation
-      gsap.utils.toArray('.project-card').forEach((card, index) => {
-        gsap.from(card, {
-          opacity: 0,
-          y: 50,
-          duration: 0.8,
-          delay: index * 0.2,
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 80%',
-          },
-        })
-      })
-
-      document.addEventListener('DOMContentLoaded', function () {
-        const typedText = document.querySelector('.typed-text')
-        const cursor = document.querySelector('.cursor')
-
-        const textArray = [
-          'Desenvolvedor Web',
-          'WebScrapper',
-          'Entusiasta de IA',
-        ]
-        const typingDelay = 200
-        const erasingDelay = 100
-        const newTextDelay = 2000
-        let textArrayIndex = 0
-        let charIndex = 0
-
-        function type() {
-          if (!typedText || !cursor) return
-
-          if (charIndex < textArray[textArrayIndex].length) {
-            if (!cursor.classList.contains('typing'))
-              cursor.classList.add('typing')
-            typedText.textContent += textArray[textArrayIndex].charAt(charIndex)
-            charIndex++
-            setTimeout(type, typingDelay)
-          } else {
-            cursor.classList.remove('typing')
-            setTimeout(erase, newTextDelay)
+      // Smooth scrolling for all anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
           }
-        }
-
-        function erase() {
-          if (!typedText || !cursor) return
-
-          if (charIndex > 0) {
-            if (!cursor.classList.contains('typing'))
-              cursor.classList.add('typing')
-            typedText.textContent = textArray[textArrayIndex].substring(
-              0,
-              charIndex - 1
-            )
-            charIndex--
-            setTimeout(erase, erasingDelay)
-          } else {
-            cursor.classList.remove('typing')
-            textArrayIndex++
-            if (textArrayIndex >= textArray.length) textArrayIndex = 0
-            setTimeout(type, typingDelay + 1100)
-          }
-        }
-
-        if (textArray.length) setTimeout(type, newTextDelay + 250)
-      })
-
-      // Scroll to top button
-      const scrollToTopButton = document.getElementById('scrollToTop')
-
-      if (scrollToTopButton) {
-        window.addEventListener('scroll', () => {
-          if (window.pageYOffset > 100) {
-            scrollToTopButton.classList.remove('hidden')
-          } else {
-            scrollToTopButton.classList.add('hidden')
-          }
-        })
-
-        scrollToTopButton.addEventListener('click', () => {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-          })
-        })
-      } else {
-        console.warn('Scroll to top button not found in the DOM')
-      }
-
-      // Scroll down button
-      const scrollDownButton = document.querySelector('.scroll-down-btn')
-
-      if (scrollDownButton) {
-        scrollDownButton.addEventListener('click', () => {
-          const nextSection = document.querySelector('#about')
-          if (nextSection) {
-            nextSection.scrollIntoView({ behavior: 'smooth' })
-          }
-        })
-      } else {
-        console.warn('Scroll down button not found in the DOM')
-      }
+        });
+      });
     </script>
-
-    <!-- Scroll to Top Button -->
-    <button
-      id="scrollToTop"
-      class="fixed bottom-5 right-5 bg-indigo-600 text-white p-2 rounded-full shadow-lg hidden transition-opacity hover:bg-indigo-700 focus:outline-none"
-    >
-      <i class="fas fa-arrow-up"></i>
-    </button>
   </body>
 </html>
